@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Payroll Calc</title>
+
+
+</head>
+
+<body>
+
+
+	<p>Enter your hours worked this week: <input type="text" name="hours" id="hours"></p>
+    <p>Enter your pay rate: <select name="rate" id="rate">
+    <option value="10">$10/hour</option>
+    <option value="20">$20/hour</option>
+    <option value="30">$30/hour</option>
+    </select>
+    </p>
+    <p>
+    <button id="calc">Calculate</button>
+	</p>
+
+
+<div id="result"></div>
+
+<script type="text/javascript">
+
+// save the button id to a variable
+// then call the calculatePay function when the button is clicked
+var btn = document.getElementById('calc');
+btn.onclick = calculatePay;
+
+
+// function to retrieve form input and calculate pay
+function calculatePay() {
+	 var rate = document.getElementById('rate').value;
+	 var hours = document.getElementById('hours').value;
+	 // console.log("rate =" + rate);
+	 var pay = rate * hours; 
+	 
+	 resultBox = document.getElementById('result');
+	 resultBox.innerHTML = "<p>You worked " + hours + " hours this week. You will receive $" + pay + ".00 in pay.</p>";
+	 
+	
+} // end calculatePay()
+
+
+</script>
+</body>
+</html>

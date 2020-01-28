@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Top Gun Pilots - JS Arrays and Loops</title>
+
+<script type="text/javascript">
+
+// create an array of pilot names
+var pilots = new Array( "Maverick", "Goose", "Merlin", "Viper", "Jester");
+
+
+// ============================================================
+// function flyby() 
+
+function flyby() {
+
+	document.write( "<p>Pilot says: This is " + pilots[0] + " requesting flyby.</p>");
+	
+	document.write( "<p>Tower replies: Negative, " + pilots[0] +", the pattern is full.</p>");
+	
+	var flybys = prompt("How many times would you like to buzz the tower?");
+	
+	for (var i=0; i < flybys; i++) {
+	
+	 document.write("<p><em>Plane flies by the tower</em></p>");
+	 
+	} // end for loop
+		
+} // end function flyby()
+
+
+// ============================================================
+// function listpilots()
+
+function listpilots() {
+	
+	// initialize a counter variable
+	var i = 0; 
+	
+	// output a heading and opening unordered list tag to the web page
+	document.write("<h3>Top Gun Pilots:</h3><ul>");
+	
+	// do a loop that writes list item tags for each pilot so long as the pilots array
+	// has valid index numbers, starting from zero
+	while (pilots[i]) {
+		
+		document.write("<li>" + pilots[i] + "</li>");
+		i++;
+	} // end while loop 
+	
+	// after the loop is complete, output the closing unordered list tag to the web page
+	document.write("</ul>");
+	
+} // end function listpilots()
+
+
+
+// ============================================================
+// functions showrio() and hiderio()
+
+
+// function to change the src of the pilot_image <img> from maverick to goose.
+// this assumes that the image is in the same folder as the html file.
+function showrio(){
+	
+	document.getElementById('pilot_image').src = "goose.jpg";
+	
+}
+
+// function to change the src of the pilot_image <img> from goose to maverick
+// this assumes that the image is in the same folder as the html file.
+function hiderio() {
+	
+		document.getElementById('pilot_image').src = "maverick.jpg";
+
+}
+
+</script>
+</head>
+
+<body>
+
+<h2>Top Gun Fun!</h2>
+<button id="btn_flyby" name="btn_flyby" onClick="flyby()">Buzz the Tower</button> 
+<button id="btn_listpilots" name="btn_listpilots" onClick="listpilots()">List the Pilots</button>
+
+<p>Mouse over Maverick to see his RIO:<br>
+<a href="#" onmouseover="showrio()" onmouseout="hiderio()">    
+	<img src="maverick.jpg" id="pilot_image" alt="Photo of Top Gun Pilot">
+</a></p>
+</body>
+</html>

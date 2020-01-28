@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smoothie Configurator - JS Functions</title>
+
+<script type="text/javascript">
+
+// set up the ingredients for one serving of the smoothie
+var bananas = 1; // whole
+
+var spinach = 1; // cups
+
+var strawberries = 6; // whole
+
+var water = 1; // cups
+
+// ask the user how many servings they need to make? 
+var servings = prompt("How many servings do you need to make?");
+
+
+
+// call the recipe function and pass it the servings variable.
+// write the results of the recipe to the web page
+document.write("<h3>Smoothie Configurator</h3>");
+
+document.write(recipe(servings));
+
+// ==========================================
+// FUNCTIONS BELOW
+// ==========================================
+
+// prepare a function that accepts the number of servings as an argument,
+// and returns an HTML-formatted list of ingredients, modified
+// for the requested number of servings
+function recipe(servings) {
+	
+	bananas = bananas * servings; 
+	spinach = spinach * servings; 
+	strawberries = strawberries * servings; 
+	water = water * servings; 
+	var ingredients = "To make " + servings + " servings of this smoothie, you will need:<ul><li>" + bananas + " bananas</li><li>" + spinach + " cups of spinach</li><li>" + strawberries + " strawberries</li><li>" + water + " cups of water</li></ul>";
+	
+	return ingredients;
+
+}
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
