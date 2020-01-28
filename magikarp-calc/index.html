@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <title>MagiKarp Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+        body {
+            background: #e6f1e1;
+        }
+        img {
+            width: 100%;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: solid;
+            border-style: outset;
+            border-radius: 15px;
+            background: #ddd;
+            text-align: center;
+        }
+        .container div {
+            display: flex;
+            align-items: center;
+            float: left;
+            border: solid;
+            padding-top: 10px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            border-style: outset;
+            border-radius: 10px;
+            font-family: courier;
+            font-size: 2vw;
+        }
+        h2 {
+            float: left;
+        }
+        .step-one {
+            grid-column: 1/2;
+            background:#cae3e8;
+        }
+        .step-two {
+            grid-column: 2/3;
+            background:#cae3e8;
+        }
+        .step-three {
+            grid-column: 3/4;
+            background:#cae3e8;
+        }
+        .step-four {
+            grid-column: 4/5;
+            background:#cae3e8;
+        }
+        .step-five {
+            grid-column: 1/2;
+            background:#cae3e8;
+        }
+        .step-six {
+            grid-column: 2/3;
+            background:#cae3e8;
+        }.step-seven {
+            grid-column: 3/4;
+            background:#cae3e8;
+        }.step-eight {
+            grid-column: 4/5;
+            background:#cae3e8;
+        }
+    </style>
+    </head>
+    <body>
+        <img src="images/evolve.png" alt="magikarp evolves to gyarados" id="evolve">
+        <div class="container">
+            <div class="step-one">
+                <h1>1.</h1>
+                Read number that was entered.
+            </div>
+            <div class="step-two">
+                <h1>2.</h1>
+                If number is below 10, display error message.
+            </div>
+            <div class="step-three">
+                <h1>3.</h1>
+                If user selects "OK", repeat step 1.
+            </div>
+            <div class="step-four">
+                <h1>4.</h1>
+                If number is above 278, display error message.
+            </div>
+            <div class="step-five">
+                <h1>5.</h1>
+                If user selects "OK", repeat step 1.
+            </div>
+            <div class="step-six">
+                <h1>6.</h1>
+                If number is between 10 and 278, multiply number entered by 10.5
+            </div>
+            <div class="step-seven">
+                <h1>7.</h1>
+                Display image of Gyarados.
+            </div>
+            <div class="step-eight">
+                <h1>8.</h1>
+                Display new number. 
+            </div>
+        </div>
+    </body>    
+</html>
