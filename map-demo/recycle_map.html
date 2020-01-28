@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recycle Google Map</title>
+
+<script>
+
+
+
+
+// create a function to initialize the map properties
+// and draw the map
+function initialize()
+{
+	
+	var mapProp = {
+	  center:new google.maps.LatLng(38.168409,-79.237012),
+	  zoom:20,
+	  mapTypeId:google.maps.MapTypeId.ROADMAP,
+	  styles: [
+		  { // overall map color
+			stylers: [
+			  { hue: "#460E82" },
+			  { saturation: -70 }
+			]
+		  }, { // styles of roads
+			featureType: "road",
+			elementType: "geometry",
+			stylers: [
+			  { lightness: 100 },
+			  { visibility: "simplified" }
+			]
+		  }, { // styles of railroads, transit, etc
+			featureType: "transit",
+			elementType: "geometry",
+			stylers: [
+			  { hue: "#460E82" },
+			  { saturation: +80 }
+			]
+		  }, { // styles of transit labels
+			featureType: "transit",
+			elementType: "labels",
+			stylers: [
+			  { hue: "#ff0066" },
+			  { saturation: +80 }
+			]
+		  }, { // styles of point of interest labels
+			featureType: "poi",
+			elementType: "labels",
+			stylers: [
+			  { visibility: "on" }
+			]
+		  }, { // style of bodies of water
+			featureType: "water",
+			elementType: "geometry",
+			stylers: [
+			  { hue: "#c4f4f4" },
+
+			]
+		  }, { // styles of road labels
+			featureType: "road",
+			elementType: "labels",
+			stylers: [
+			  { visibility: "on" }
+			]
+		  }
+		]}; // end mapProp
+		
+	// create the map with the defined properties	
+	// display the map in a div with the id of googleMap
+	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+// ====================== ecoATM ======================
+
+	// location 1 ecoATM
+	var myLatLng = new google.maps.LatLng(38.428726,-78.843813);
+    var markerEcoatm = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        icon: "recycle.png", // assumes file is in same folder as this code
+        title: "ecoATM"
+        
+    });
+    // HTML content for the info window
+    var contentStringH = '<h2>ecoATM</h2><p>EcoATM helps by providing instant cash for used devices that previously were personal clutter at home. The lifestyle end result is sustainable, simple, uncluttered, and beneficially enhanced.</p>';
+
+    // build the info window in Google Map
+  	var infowindowEcoatm = new google.maps.InfoWindow({
+    	content: contentStringH
+  	});
+
+  	// Adds a listener to only display the info window when the marker
+  	// is clicked.
+  	markerEcoatm.addListener('click', function() {
+  		infowindowEcoatm.open(map, markerEcoatm);
+  	});
+
+
+
+
+    // ====================== Recycle Management LLC ======================
+
+    // location 2 Recycle Management LLC
+	var myLatLng = new google.maps.LatLng(38.427923,-78.884097);
+    var markerManagement = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        icon: "recycle.png", // assumes file is in same folder as this code
+        title: "Recycle Management LLC"
+        
+    });
+
+	// Create an info window for Wilson
+	// HTML content for the info window
+    var contentString = '<h2>Recycle Management LLC</h2><p>We are a full service ferrous and non-ferrous metal recycler offering roll-off container services, electronic waste recycling, and auto removal.</p>';
+
+    // build the info window in Google Map
+  	var infowindowManagement = new google.maps.InfoWindow({
+    	content: contentString
+  	});
+
+  	// Adds a listener to only display the info window when the marker
+  	// is clicked.
+  	markerManagement.addListener('click', function() {
+  		infowindowManagement.open(map, markerManagement);
+  	});
+    
+    
+    
+    
+    // ====================== Harrisonburg Recycling Convenience Center ======================
+
+    // location 3 Harrisonburg Recycling Convenience Center
+	var myLatLng = new google.maps.LatLng(38.416948,-78.889025);
+    var markerCenter = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        icon: "recycle.png", // assumes file is in same folder as this code
+        title: "Harrisonburg Recycling Convenience Center"
+        
+    });
+
+	// Create an info window for Wilson
+	// HTML content for the info window
+    var contentString = '<h2>Harrisonburg Recycling Convenience Center</h2><p>Residents are responsible for taking their own recyclable materials to the center. Once at the center, the items will need to be sorted into the appropriate container. An attendant will be on site to provide assistance.</p>';
+
+    // build the info window in Google Map
+  	var infowindowCenter = new google.maps.InfoWindow({
+    	content: contentString
+  	});
+
+  	// Adds a listener to only display the info window when the marker
+  	// is clicked.
+  	markerCenter.addListener('click', function() {
+  		infowindowCenter.open(map, markerCenter);
+  	});
+    
+    
+    
+    
+    // ====================== Rockingham Scrap Metals ======================
+
+    // location 4 Rockingham Scrap Metals
+	var myLatLng = new google.maps.LatLng(38.463223,-78.866753);
+    var markerMetal = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        icon: "recycle.png", // assumes file is in same folder as this code
+        title: "Rockingham Scrap Metals"
+        
+    });
+
+	// Create an info window for Wilson
+	// HTML content for the info window
+    var contentString = '<h2>Rockingham Scrap Metals</h2><p>When you choose to scrap locally here in Harrisonburg, at Rockingham Scrap, you are ensuring you will be paid the most competetive scrap prices for your scrap metal.</p>';
+
+    // build the info window in Google Map
+  	var infowindowMetal = new google.maps.InfoWindow({
+    	content: contentString
+  	});
+
+  	// Adds a listener to only display the info window when the marker
+  	// is clicked.
+  	markerMetal.addListener('click', function() {
+  		infowindowMetal.open(map, markerMetal);
+  	});
+
+}
+
+
+// create a function to load the Google Maps API script
+function loadScript() {
+  var script = document.createElement('script');
+  script.src = 'http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize';
+  document.body.appendChild(script);
+}
+
+// call the loadScript() function when the window loads
+window.onload = loadScript;
+
+</script>
+</head>
+
+<body>
+<!-- create a div with an id that matches the one used in the map variable in js -->
+<div id="googleMap" style="width:600px;height:480px;"></div>
+
+</body>
+</html>
