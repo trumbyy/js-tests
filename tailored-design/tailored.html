@@ -1,0 +1,225 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The Newspaper</title>
+
+
+
+<link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC' rel='stylesheet' type='text/css'>
+
+<link href="tailored.css" rel="stylesheet" type="text/css">
+    
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+    
+// when the document is ready, do this:
+$(document).ready(function() {
+		// create a variable to store the pinkunicorn button by id
+		var unicornbutton = document.getElementById('pinkunicorn');
+		// add a click event listener that calls the pinkUnicorn() function when triggered
+   	    unicornbutton.addEventListener('click', pinkUnicorn);
+	
+}); // end document.ready for event listener on button   
+    
+// create a javascript function that uses jquery to 
+// style the page in a pink theme 
+function pinkUnicorn() {
+
+// begin jQuery styling when the DOM is fully loaded	
+$(document).ready(function() {
+	
+    // set the background color of page to pink
+    $("body").css("background-color", "pink");
+    
+    //change the page font to comic sans ms
+    $("body").css("font-family", "comic sans ms");
+    
+    //change the hyperlink color to purple
+    $("#nav a").css("color", "purple");
+    
+    //change the navigation background color to white
+    $("#nav").css("background-color", "white");
+    
+    //add the unicorn image to the logo div
+    document.getElementById("logo").innerHTML = "<img src=\"images/unicorn.jpg\" alt=\"Unicorn Image\">";
+    
+    
+    //maintain black text on pinkUnicorn
+    $("body").css("color", "black");
+    
+    //maintain comic sans ms font
+    $("body").css("font-family", "comic sans ms");
+    
+  
+}); // end document ready
+
+} // end pinkUnicorn() function
+    
+    
+// when the document is ready, do this:
+$(document).ready(function() {
+		// create a variable to store the darkTheme button by id
+		var darkbutton = document.getElementById('darktheme');
+		// add a click event listener that calls the darktheme() function when triggered
+   	    darkbutton.addEventListener('click', darkTheme);
+	
+}); // end document.ready for event listener on button  
+    
+//create a javascript function that uses jquery to
+//style the page in a dark theme
+function darkTheme() {
+    
+//begin jquery styling when the DOM is fully loaded
+    
+$(document).ready(function() {
+    
+    //set the background color of the page to black
+    $("body").css("background-color", "black");
+    
+    //change the page text color to white
+    $("body").css("color", "white");
+    
+    //change the hyperlink color to black
+    $("#nav a").css("color", "black");
+    
+    //change the navigation background color to white
+    $("#nav").css("background-color", "white");
+    
+    
+    //remove unicorn image
+    document.getElementById("logo").innerHTML = "";
+    
+    //maintain serif font
+    $("body").css("font-family", "serif");
+    
+    //maintain white text
+    $("body").css("color", "white");
+    
+}); //end document ready    
+    
+} //end darkTheme() function
+    
+
+// when the document is ready, do this:
+$(document).ready(function() {
+		// create a variable to store the default button by id
+		var defaultbutton = document.getElementById('original');
+		// add a click event listener that calls the darktheme() function when triggered
+   	    defaultbutton.addEventListener('click', defaultTheme);
+	
+}); // end document.ready for event listener on button  
+    
+// create a javascript function that uses jquery to 
+// style the page in the default theme 
+function defaultTheme() {
+
+// begin jQuery styling when the DOM is fully loaded	
+$(document).ready(function() {
+  
+    // maintain the serif font
+    $("body").css("font-family", "serif");
+  
+    //remove unicorn image
+    document.getElementById("logo").innerHTML = "";
+  
+    //maintain white background
+    $("body").css("background-color", "white");
+  
+    //maintain black font
+    $("body").css("color", "black");
+    
+    //maintain navigation background color of black
+    $("#nav").css("background-color", "black");
+    
+    //maintain navigation font color of white
+    $("#nav a").css("color", "white");
+  
+}); // end document ready
+
+} // end defaultTheme() function
+    
+    
+</script>
+
+</head>
+
+<body>
+
+<div id="container">
+
+	<div id="header">
+    
+    	<div id="logo"></div>
+        
+    	<h1 class="newspaper">The Newspaper</h1>
+        
+        <div id="buttons">
+        
+        	<button type="button" id="pinkunicorn">Pink Unicorns</button> 
+        	<button type="button" id="darktheme">Light-on-Dark</button>
+            <button type="button" id="original">Default</button>
+        
+        
+        </div> <!-- end div buttons -->
+        
+    </div> <!-- end div header -->
+    
+    <div id="nav">
+    
+    <ul>
+    	<li><a href="#">Home</a></li>
+        <li><a href="#">Local</a></li>
+        <li><a href="#">World</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Finance</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Tech</a></li>
+    </ul>
+        
+    </div> <!-- end div nav -->
+    
+    <div id="col1">
+     
+    	<h3>Headline 1</h3>
+        
+        <p>Gannett awesome hot news doctrine inverted pyramid #twittermakesyoustupid shoot a photo digital circulation strategy copyright tablets, Josh Marshall recontextualize hashtag libel lawyer Neil Postman curmudgeon we need a Nate Silver retweet, The Work of Art in the Age of Mechanical Reproduction Instagram Buttry the medium is the massage but what's the business model paidContent synergize. Romenesko A.J. Liebling in the slot he said she said view from nowhere Reuters discuss Dayton for under $900 a day blog, mthomps stream API mthomps West Seattle Blog metered model Steve Jobs got drudged Knight News Challenge, 5% corruption Nick Denton tablets Free Darko Frontline curation information overload.</p>
+        
+        <h3>Headline 2</h3>
+        
+        <p>Perfect for starting a campfire commons-based peer production content farm linkbait newspaper Robin Sloan Gawker AOL TechCrunch Robin Sloan Project Thunderdome RSS, Arianna mathewi Gutenberg parenthesis if the news is that important, it'll find me shoot a photo just across the wire analytics plagiarism open newsroom The Printing Press as an Agent of Change, going forward experiment reality-based get me rewrite digital circulation strategy MinnPost hackgate process vs. product audience atomization overcome should isn't a business model. </p>
+           
+    </div> <!-- end div col1 -->
+    
+    <div id="col2">
+    
+    	<h2>Main Headline</h2>
+        
+        <p>Walter Lippmann tweets Storify Aron Pilhofer Reuters information wants to be free Instagram but what's the business model Google+, West Seattle Blog if the news is that important, it'll find me news.me perfect for starting a campfire Bill Keller social media optimization content is king, a giant stack of newspapers that you'll never read if the news is that important, it'll find me twitterati dead trees Encyclo natural-born blogger Nook. process vs. product Instagram iPad app circulation future future of narrative Voice of San Diego analytics twitterati, Jurgen Habermas advertising cancel my subscription anonymity Arianna synergize tabloid, David Cohn John Dewey NPR metered model Buttry TweetDeck This Week in Review.</p>
+
+<p>Gutenberg every dog loves food kitchen table of the future mathewi filters newspaper strike Google News CNN leaves it there linkbait, bot social media optimization the notional night cops reporter in Des Moines The Daily incent The Printing Press as an Agent of Change tweet Robin Sloan, digital first future of context Django the medium is the massage newspaper strike trolls hyperlocal. Dan Fleckner Google News do what you do best and link to the rest shoot a video Knight News Challenge gamification iPad app NPR newspaper fourth estate, Pictures of Goats section Tim Carmody hyperhyperlocal dying net neutrality Article Skimmer location-based kitchen table of the future Neil Postman Jurgen Habermas, tags the audience knows more than I do paywall Pulse paywall A.J. Liebling Patch Google News.</p>
+
+<p>Bot hashtag NPR meme in the slot fair use Steve Jobs do what you do best and link to the rest, tools Zite social media newsonomics Gannett Marshall McLuhan election-night hologram dying, Chartbeat open source gutter copyboy Knight News Challenge Gawker. WikiLeaks linking twitterati syndicated attracting young readers information overload go viral a giant stack of newspapers that you'll never read the power of the press belongs to the person who owns one, commons-based peer production Jeff Jarvis prostate the other longer Book Review linking Marshall McLuhan inverted pyramid RSS Knight Foundation, layoffs just across the wire discuss Does my "yes, but" look big in this corner office? Bill Keller perfect for starting a campfire I love the Weather &amp; Opera section.</p>
+    
+    </div> <!-- end div col2 -->
+    
+    <div id="col3">
+    <h3>Headline 3</h3>
+        
+        <p>Walter Lippmann HuffPo curation Alberto Ibarguen going forward attracting young readers hyperhyperhyperlocal Ushahidi Knight News Challenge the notional night cops reporter in Des Moines, future of narrative media bias Tumblr curmudgeon information overload Romenesko The Printing Press as an Agent of Change tweet CPM David Foster Wallace, layoffs column-inch WSJ synergize crowdfunding gotta grok it before you rock it got drudged Chartbeat. community media diet community awesome MinnPost awesome twitterati Google+ mthomps Facebook, CPM DocumentCloud Aron Pilhofer get me rewrite digital first information overload we will make them pay.</p>
+        
+        <h3>Headline 4</h3>
+        
+        <p>What Would Google Do aggregation Andy Carvin Demand Media stupid commenters Free Darko Tumblr, fair use Does my "yes, but" look big in this corner office? hyperlocal John Dewey engagement Sulzberger free as in beer, privacy Journal Register in the slot data journalism linkbait. content farm scoop ProPublica content farm tweets mthomps, Nick Denton shoot a video do what you do best and link to the rest discuss AP advertising, lede get me rewrite Politics &amp; Socks page WordPress. </p>
+    
+    </div> <!-- end div col3 -->
+    
+    
+
+
+</div> <!-- end div container -->
+</body>
+</html>

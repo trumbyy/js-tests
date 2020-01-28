@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#container { width: 960px;
+			 margin: 0 auto 0 auto;
+}
+
+#buttons { width: 30%; 
+		   float: right; 
+		   text-align: right;
+}
+
+#header .newspaper { font-family: 'IM Fell French Canon SC', serif;
+			 font-size: 3em;
+			 text-align: center; }
+
+#nav { background-color: black; 
+	   text-align: center;
+	   clear: both; }
+
+#nav ul {  
+		  list-style-type: none;
+}
+
+#nav ul li { display: inline;
+			 padding-left: 1em;
+			 padding-right: 1em; }
+
+#nav li a { color: white;
+			font-size: 1.25em;
+			text-decoration: none; }
+
+#col1 { width: 23%;
+		float: left;
+		padding-right: 1em;
+}
+
+#col2 { width: 50%;
+		float: left;
+}
+
+#col3 { width: 23%;
+		float: left;
+		padding-left: 1em;
+}
+
