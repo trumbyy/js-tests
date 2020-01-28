@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JMU Fight Song</title>
+
+<!-- set the basic page layout styling -->
+<style type="text/css">
+
+body { background-color: #450084; 
+}
+
+#container { width: 800px;
+			 margin-left: auto;
+			 margin-right: auto;
+			 background-color: white;
+			 color: black; 
+}
+</style>
+
+<!-- load the jQuery library -->
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+
+// when the document is ready, do this:
+$(document).ready(function() {
+		// create a variable to store the jmu button by id
+		var jmubutton = document.getElementById('jmubutton');
+		// add a click event listener that calls the purpleout() function when triggered
+   	    jmubutton.addEventListener('click', purpleout);
+	
+}); // end document.ready for event listener on button
+
+
+
+// create a javascript function that uses jquery to 
+// style the page in a JMU theme 
+function purpleout() {
+
+// begin jQuery styling when the DOM is fully loaded	
+$(document).ready(function() {
+	
+    // set the background image of the page
+    $("body").css("background-image", "url(images/bg-jmu.jpg)");
+  
+    // change the page font to arial
+    $("body").css("font-family", "arial");
+  
+    // change the original headline text to a duke dog image
+    document.getElementById("jmuheadline").innerHTML = "<img src=\"images/dukedog.png\" alt=\"Duke Dog Image\">";
+  
+    // change the alternating table rows to have background colors and 
+    // appropriate text colors
+    $("#fightsong tr:even").css("background-color", "#450084");
+  
+    $("#fightsong tr:even").css("color", "white");
+  
+    $("#fightsong tr:odd").css("background-color", "#CBB677");
+  
+    // hide the button
+    $("#jmubutton").css("visibility", "hidden");
+  
+}); // end document ready
+
+} // end purpleout() function
+
+
+
+</script>
+
+</head>
+
+<body>
+
+<div id="container">
+
+	<h3 id="jmuheadline">JMU Fight Song</h3>
+
+<table id="fightsong" width="80%" border="0">
+  <tr>
+    <td>Madison, James Madison,</td>
+  </tr>
+  <tr>
+    <td>We are the Dukes of JMU!</td>
+  </tr>
+  <tr>
+    <td>Madison, James Madison,</td>
+  </tr>
+  <tr>
+    <td>The fighting Dukes of JMU! </td>
+  </tr>
+  <tr>
+    <td>Fight for Glory-- Honors Won,</td>
+  </tr>
+  <tr>
+    <td>Brighten the Lights of Madison!</td>
+  </tr>
+  <tr>
+    <td>Madison, James Madison,</td>
+  </tr>
+  <tr>
+    <td>Show your Colors</td>
+  </tr>
+  <tr>
+    <td>Proud and True -</td>
+  </tr>
+  <tr>
+    <td>We are the Dukes of JMU! </td>
+  </tr>
+</table>
+
+
+<!-- when this button is clicked, call the purpleout() function -->
+<button type="button" id="jmubutton">Purple Out!</button>
+
+</div> <!-- end div container -->
+
+</body>
+</html>
