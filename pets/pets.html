@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Favorite Pets</title>
+<style>
+
+</style>
+<script type="text/javascript">
+	var pet;
+
+	pet = prompt("what is your favorite pet?");
+	//prompt user to enter their favorite pet
+
+	//================================================
+	//	functions below
+	//================================================ 
+
+	if (pet == "dog") {
+		document.write("<p style=\"color: red\">Great choice! A " + pet + " is the greatest pet you could possibly choose from! They are incredibly loyal, and will love you unconditionally every day!</p>");
+		document.write("<img style=\"width: 50%\" src=\"images/dog.jpg\">");
+	}
+	//if user enters "dog", display stylized text and image of dog
+
+	else if (pet == "dogs") {
+		document.write("<p style=\"color: red\">Great choice! " + pet + " are the greatest pets you could possibly choose from! They are incredibly loyal, and will love you unconditionally every day!</p>");
+		document.write("<img style=\"width: 50%\" src=\"images/dog.jpg\">");
+	}
+	//if user enters "dogs", display stylized text and image of dog
+
+	else if (pet == "cat"){
+		document.write("<p style=\"color: blue\">A " + pet + ". Oh.</p>")
+		document.write("<img style=\"width: 50%\" src=\"images/cat.jpg\">");
+	}
+	//if user enters "cat", display stylized text and image of cat
+
+
+	else if (pet == "cats"){
+		document.write("<p style=\"color: blue\">" + pet + ". Oh.</p>")
+		document.write("<img style=\"width: 50%\" src=\"images/cat.jpg\">");
+	}
+	//if user enters "cats", display stylized text and image of cat
+
+
+	else {
+		document.write("<p style=\"color: green\">" + pet + ". They are so much better than cats!</p>")
+		document.write("<img style=\"width: 50%\" src=\"images/thumb.jpg\">");
+	}
+	//if user does not enter "dog(s)" or "cat(s)", display stylized text with image of thumb
+
+</script>
+<body>
+
+</body>
