@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Story Maker</title>
+
+<style>
+    .box {
+        border: dotted;
+        border-color: blue;
+        margin-right: 850px;
+    }
+    .resultBox {
+        border: solid;
+        border-color: blue; 
+    }
+
+</style>
+
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>Story Maker</h1>
+
+        <p>Noun : <input type="text" name="noun" id="noun"></p>
+        <p>Adjective : <input type="text" name="adjective" id="adjective"></p>
+        <p>Someone's Name : <input type="text" name="person" id="person"></p>
+
+        <p>
+        <button id="write">Make Story</button>
+        </p>
+    </div>
+
+    <div id="result" class="result"></div>
+
+
+<script type="text/javascript">
+
+// save the button id to a variable
+// then call the calculatePay function when the button is clicked
+var btn = document.getElementById('write');
+
+
+// function to retrieve form input and calculate pay
+btn.onclick = function writeStory() {
+	var noun = document.getElementById('noun').value;
+	var adjective = document.getElementById('adjective').value;
+	var person = document.getElementById('person').value;
+
+    var resultBox = document.getElementById('result');
+    resultBox.innerHTML = "<p>" + person + " likes a(n) " + adjective + noun + ".</p>";	 
+	
+} // end calculatePay()
+
+
+</script>
+</body>
+</html>
