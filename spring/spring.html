@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Days Until Spring</title>
+<style>
+    .flower {
+        background-image: url("images/flower.png");
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 200px;
+    }
+    .number {
+        font-size: 48px;
+        position: relative;
+        top: 68px;
+        left: 74px; 
+    }
+</style>
+
+<script type="text/javascript">
+    var time = 24 * 60 * 60 * 1000; 
+    //convert milliseconds to days
+    var today = new Date();
+    //set variable for current date
+    var spring = new Date(2019, 2, 20)
+    //set variable for spring's date
+    
+//==========================================
+//        Functions
+//==========================================
+    
+    function getDaysUntilSpring()
+        {
+    
+        var diff = spring.getTime() - today.getTime();
+        diff = Math.floor(diff/time);
+        return diff;
+        }
+
+
+</script>
+</head>
+
+<body>
+    <div class="flower">
+        <span class="number">
+            <script>
+                document.write(getDaysUntilSpring());
+            </script>
+        </span>
+    </div>
+    <div class="h3">
+        <script>
+            document.write("<h3>Days Until Spring 2019!</h3>");
+        </script>
+    </div>
+</body>
+</html>
